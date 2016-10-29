@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>广州欢腾鞋业-首页</title>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}my_css/head.css"/>
+</head>
+<body>
+	<!-- 页头top -->
+	<div id="head_w">
+		<div id="head" class="head_box">
+			<span class="head_span">
+				<em>·</em>
+				欢迎进入本站！
+			</span>
+			<ul>
+				<li>
+					<a href="javascript:;">设为首页</a>
+				</li>
+				<li>
+					<a href="javascript:;">加入收藏</a>
+				</li>
+				<li>
+					<a href="javascript:;">联系我们</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- nav导航 -->
+	<div id="nav_w">
+		<div id="nav">
+			<div class="logo">
+				<img src="{IMG_PATH}my_images/logo.png" alt=""/>
+			</div>
+			{pc:content action="category" catid="0" num="7"}
+			<ul class="nav">
+				{php $a=0}
+				{loop $data $r}
+				{$a++}
+				<li class="nav1 nav_list {if $a==count($data)}last{/if}">
+					<a href="{if $a==1}{siteurl($siteid)}{else}{$r[url]}{/if}">
+						<img src="{IMG_PATH}my_images/{$a}{$a}.png" alt=""/>
+					</a>
+					<a href="{if $a==1}{siteurl($siteid)}{else}{$r[url]}{/if}">
+						<img src="{$r[image]}" alt="" class="img"/>
+					</a>
+				</li>
+				<!--<li class="nav{$r[catid]}">
+					<a href="{$r[url]}"></a>
+				</li>-->
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>

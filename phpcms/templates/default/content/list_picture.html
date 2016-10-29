@@ -1,0 +1,56 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}my_css/picture.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num=1}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">2016春夏款</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>产品展示
+        				<em>PRODUCTS</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 产品展示
+            		</em>
+        		</div>
+        		<div class="product">
+        			{pc:content action="lists" catid="$catid" num="9" page="$page"}
+		     	 	<ul>
+		     	 		{loop $data $v}
+		     	 		<li>
+		     	 			<a href="{$v[url]}">
+		     	 				<img src="{$v[thumb]}" alt="" />
+		     	 			</a>
+		     	 			<p><a href="{$v[url]}">{$v[title]}</a></p>
+		     	 		</li>
+		     	 	{/loop}
+					</ul>
+					<div class="page">
+						<a href="javascript:;">首页</a>
+						{$pages}
+						<a href="javascript:;">1/3页</a>
+					</div>
+					{/pc}
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

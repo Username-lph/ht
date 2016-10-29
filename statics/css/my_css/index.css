@@ -1,0 +1,113 @@
+/*banner图*/
+#banner_w{
+	width:100%;
+	height:354px;
+	background-image:url(../../images/my_images/banner.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+#banner{
+	width:1015px;
+	height:354px;
+	margin:0px auto;
+	position:relative;
+}
+#banner .ban_top{
+	height:323px;
+	overflow:hidden;
+}
+.ban_top ul{
+	width:1015px;
+	/*height:323px;*/
+	float:left;
+}
+.ban_top .ban{
+	height:323px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.ban_top .img{
+	z-index:2;
+}
+.ban_top .ban img{
+	height:323px;
+	width:1015px;
+}
+#banner .ban_bottom{
+	height:31px;
+	background:#f3640e;
+	z-index:30;
+}
+.ban_bottom ul{
+	padding:11px 0px 0px 509px;
+}
+.ban_bottom ul .circle{
+	width:8px;
+	height:8px;
+	cursor:pointer;
+	margin-right:15px;
+	float:left;
+	background-image:url(../../images/my_images/li.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.ban_bottom ul .ban_circle{
+	background-image:url(../../images/my_images/li_hover.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.box_kx{
+	height:12px;
+	background:#1A1A1A;
+	border-top:1px solid #9e9e9e;
+}
+/*body*/
+.body_w{
+	width:100%;
+	height:254px;
+	background:#1A1A1A;
+}
+.box{
+	width:1015px;
+	height:254px;
+	background-image:url(../../images/my_images/body.png);
+	background-repeat:no-repeat;
+	margin:0px auto;
+}
+.box ul{
+	padding-top:54px;
+}
+.box li{
+	width:312px;
+	height:170px;
+	padding-left:20px;
+	float:left;
+}
+.box1 a{
+	display:block;
+	width:312px;
+	height:170px;
+	background-image:url(../../images/my_images/in4.jpg);
+}
+.box1 a:hover{
+	background-image:url(../../images/my_images/in1.jpg);
+}
+.box2 a{
+	display:block;
+	width:312px;
+	height:170px;
+	background-image:url(../../images/my_images/04.jpg);
+}
+.box2 a:hover{
+	background-image:url(../../images/my_images/03.jpg);
+}
+.box3 a{
+	display:block;
+	width:312px;
+	height:170px;
+	background-image:url(../../images/my_images/in3.png);
+}
+.box3 a:hover{
+	background-image:url(../../images/my_images/in6.png);
+}

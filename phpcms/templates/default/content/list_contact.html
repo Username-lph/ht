@@ -1,0 +1,46 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}my_css/contact.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num="1"}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">{$r[title]}</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>联系我们
+        				<em>CONTACT</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 联系我们
+            		</em>
+        		</div>
+        		<div class="dt_show">
+        			{pc:content action="lists" catid="$catid" num="1" moreinfo="1"}
+        			{loop $data $r}
+        				{$r[content]}
+        				<iframe border="0" frameborder="0" framespacing="0" height="400" hspace="0" id="mapbarframe" marginheight="0" marginwidth="0" scrolling="no" src="http://searchbox.mapbar.com/publish/template/template1010/index.jsp?CID=lihuanli&amp;tid=tid1010&amp;showSearchDiv=1&amp;cityName=%E5%B9%BF%E5%B7%9E%E5%B8%82&amp;nid=MAPBQNHBXMCAZIYBXNHWX&amp;width=700&amp;height=400&amp;infopoi=2&amp;zoom=10&amp;control=1" vspace="0" width="700"></iframe>
+        				<iframe border="0" frameborder="0" framespacing="0" height="400" hspace="0" id="mapbarframe" marginheight="0" marginwidth="0" scrolling="no" src="http://searchbox.mapbar.com/publish/template/template1010/index.jsp?CID=lihuanli&amp;tid=tid1010&amp;showSearchDiv=1&amp;cityName=%E5%A4%AA%E5%8E%9F%E5%B8%82&amp;nid=MAPBXNJBLMTPYVXRHBX&amp;width=700&amp;height=400&amp;infopoi=2&amp;zoom=10&amp;control=1" vspace="0" width="700"></iframe>
+        			{/loop}
+        			{/pc}
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

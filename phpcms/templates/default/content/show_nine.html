@@ -1,0 +1,62 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}my_css/show.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num=1}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">2016春夏款</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>产品展示
+        				<em>PRODUCTS</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 产品展示
+            		</em>
+        		</div>
+        		<div class="product">
+        			<p class="h5">
+        				54M12-15
+        			</p>
+        			<p class="h6">
+        				<img src="{IMG_PATH}my_images/show_03.jpg" alt="">
+        			</p>
+        			<div class="h7">
+        				<div class="h8">
+        					<img src="{IMG_PATH}my_images/zy_1.png" alt="" />
+        				</div>
+        			</div>
+        			<div class="h3">
+        				<p align="center">
+        					<img src="{IMG_PATH}my_images/show_04.jpg" alt="" />
+        					<img src="{IMG_PATH}my_images/show_05.jpg" alt="" />
+        				</p>
+        			</div>
+        			<div class="h4">
+        				<a href="javascript:;">上一条:</a>
+        				<a href="{$previous_page[url]}">{$previous_page[title]}</a><br/>
+        				<a href="javascript:;">下一条:</a>
+        				<a href="{$next_page[url]}">{$next_page[title]}</a>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

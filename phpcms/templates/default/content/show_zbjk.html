@@ -1,0 +1,67 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}my_css/gz.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num=1}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">新闻动态</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>新闻动态
+        				<em>NEWS</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 新闻动态
+            		</em>
+        		</div>
+        		<div class="new_show">
+        			<p class="h1">雪地靴保养说明</p>
+        			<p class="h2">浏览次数： 23    日期：2014-03-12 13:16:30</p>
+        			<div class="h3">
+ 						<p>
+ 							<span>
+ 								鞋太松，重心不稳。有的人鞋子穿松、穿旧了之后也不舍得扔，或者穿鞋的时候不把鞋带系紧。其实这样不能为足部提供足够的支撑力。长此以往，脚踝与膝盖骨头之间的软骨组织会退化。
+ 							</span>
+ 						</p>
+ 						<p>
+ 							<span>
+ 								选鞋建议：在挑选鞋子时，鞋后跟部分一定要牢牢地“抓住”脚部。穿着时，鞋带要系紧，以脚趾可以活动、大脚趾可以自然拱起、但脚跟不会移动为准。
+ 							</span>
+ 						</p>
+ 						<p>
+ 							<span>
+ 								鞋底硬，多承受7%压力。此外，穿硬邦邦的鞋子也可能加重膝骨关节炎。
+ 							</span>
+ 						</p>
+ 						<p>
+ 							<span>
+ 								选鞋建议：买鞋的时候，可以将鞋掌对折，查看其软硬度。软硬适宜的鞋子应该是对折时，鞋底弯曲的位置、角度，与人行走时脚掌弯曲的程度相仿。
+ 							</span>
+ 						</p>
+        			<div class="h4">
+        				<a href="{$previous_page[url]}">上一条：{$previous_page[title]}</a><br/>
+        				<a href="javascript:;">下一条：</a>
+        				<a href="{$next_page[url]}">{$next_page[title]}</a>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

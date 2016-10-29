@@ -1,0 +1,52 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}my_css/show_bxbyzs.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num=1}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">新闻动态</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>新闻动态
+        				<em>NEWS</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 新闻动态
+            		</em>
+        		</div>
+        		<div class="new_show">
+        			<p class="h1">雪地靴保养说明</p>
+        			<p class="h2">浏览次数： 18    日期：2016-03-12 13:16:30</p>
+        			<div class="h3">
+						<p class="second">
+							<span>
+								广州欢腾鞋业有限公司网站正式上线运营！
+							</span>
+						</p>
+        			<div class="h4">
+        				<a href="{$previous_page[url]}">上一条：{$previous_page[title]}</a><br/>
+        				<a href="javascript:;">下一条：</a>
+        				<a href="{$next_page[url]}">{$next_page[title]}</a>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

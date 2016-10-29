@@ -1,0 +1,65 @@
+{template "content","header"}
+<link rel="stylesheet" href="{CSS_PATH}my_css/gz.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num=1}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">新闻动态</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>新闻动态
+        				<em>NEWS</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 新闻动态
+            		</em>
+        		</div>
+        		<div class="new_show">
+        			<p class="h1">雪地靴保养说明</p>
+        			<p class="h2">浏览次数： 23    日期：2014-03-12 13:16:30</p>
+        			<div class="h3">
+ 						<p>
+ 							<span>气温逐渐升温，陪伴了一整个冬季的雪地靴是时候收入鞋柜(专卖店)了，那么在这之前如何做好清洗雪地靴的工作呢?</span>
+ 						</p>
+ 						<p>
+ 							<span>
+ 								使用冷水或温水弄湿雪地靴鞋身，但不要过分浸泡。正确的清洗方法是使用清洁的海绵刷或者软毛刷彻底均匀地刷洗整个鞋身表面。也可以使用一支细毛牙刷来帮助清洗过程。一旦刷洗冲洗干净鞋子，可以将雪地靴放入洗衣机中进行几分钟的甩干来去掉靴子上多余的水分。
+ 							</span>
+ 						</p>
+ 						<p>
+ 							<span>
+ 								雪地靴需要放置自然晾干，切记不要使用烘干机烘干或者让靴子在烈日下暴晒。晾干时请将鞋底向上，倒立整个鞋身，鞋会在一两天内完全晾干。晾干后鞋子会稍微收缩，不要着急，穿几次就能恢复。
+ 							</span>
+ 						</p>
+ 						<p>
+ 							<span>
+ 								清洗晾干后的干净靴子可配合使用CGM防水喷雾剂，加强靴子的抗水性。一旦靴子完全护理过后，可以使用专用绒毛护理刷按一个方向轻轻刷理鞋身表面，帮助恢复绒皮表面天然绒毛自然漂亮顺滑的纹理外观。
+ 							</span>
+ 						</p>
+        			<div class="h4">
+        				<a href="{$previous_page[url]}">上一条：{$previous_page[title]}</a><br/>
+        				<a href="javascript:;">下一条：</a>
+        				<a href="{$next_page[url]}">{$next_page[title]}</a>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

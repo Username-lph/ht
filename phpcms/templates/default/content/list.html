@@ -1,0 +1,46 @@
+{template "content","header"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}my_css/list_about.css" />
+	<!-- banner -->
+	<div id="banner_w">
+		<div id="banner">
+		</div>
+	</div>
+	<!-- box_kx -->
+	<div class="box_kx"></div>
+	<!-- body -->
+	<div class="body_w">
+		<div class="Box">
+			<div class="body_left">
+				<ul>
+					{pc:content action="lists" catid="$catid" num=5}
+					{loop $data $r}
+					<li class="left">
+						<a href="{$CATEGORYS[$catid][url]}">{$r[title]}</a>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+			<div class="body_right">
+				<div class="title">
+        			<span>品牌介绍
+        				<em>ABOUT</em>
+        			</span>
+            		<em>
+            			<a href="{siteurl($siteid)}">首页</a>
+            			&gt; 品牌介绍
+            		</em>
+        		</div>
+        		<div class="dt_show">
+        			{pc:content action="lists" catid="$catid" num="1" moreinfo="1"}
+        			{loop $data $r}
+        				{$r[content]}
+						<img src="{$r[thumb]}" alt=""/>
+					<p></p><br/>
+					{/loop}
+					{/pc}
+        		</div>
+			</div>
+		</div>
+	</div>
+{template "content","footer"}

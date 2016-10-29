@@ -1,0 +1,53 @@
+/*页脚*/
+.copyright_w{
+	background:#0a0a0a;
+	border-top:1px solid #262626;
+	padding:10px 0px;
+	clear:both;
+}
+.copyright{
+	text-align:left;
+	color:#5f5e5e;
+	line-height:24px;
+	width:1015px;
+	margin:0px auto;
+	background:#0a0a0a;
+}
+.copyright .copy{
+	width:866px;
+	height:60px;
+	padding:2px 0px 2px 0px;
+}
+.copy .li1{
+	margin-right:1px;
+}
+.copy li{
+	float:left;
+}
+.copy .li2{
+	width:606px;
+	height:58px;
+	margin-left:46px;
+}
+.li2 .left{
+	padding:2px 2px;
+}
+.left a{
+	font-size:12px;
+	padding:2px 2px 0px 0px;
+	color:#5f5e5e;
+}
+.left span{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	padding:2px 5px 0px 5px;
+}
+.right a{
+	font-size:12px;
+	color:#5f5e5e;
+}
+.right span{
+	color:#5f5e5e;
+	font-size:12px;
+}
